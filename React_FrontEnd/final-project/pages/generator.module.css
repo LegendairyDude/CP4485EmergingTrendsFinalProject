@@ -1,0 +1,34 @@
+/* generator.module.css */
+
+.pageContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url("/images/pet-background-vector.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.genPageTitle {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* Help txt stand out moar #crappy background rn*/
+.titleBackground {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 8px;
+
+}
+
+
+.nameGenForm {
+    width: 400px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

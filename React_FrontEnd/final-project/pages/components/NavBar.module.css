@@ -1,0 +1,141 @@
+/* NavBar.module.css */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #e6e1e1;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navLink {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.navImg {
+  display: flex;
+  align-items: center;
+}
+
+.logoImage {
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+
+/* DesktopNav Styles */
+.deskTopNav {
+  display: flex;
+  align-items: center;
+}
+
+.deskTopGenBtnContainer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.deskTopNavGenBtn,
+.signOutBtn,
+.deskTopSignInBtn {
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.deskTopNavGenBtn {
+  background-color: #ff8c00;
+}
+
+.deskTopNavGenBtn:hover {
+  background-color: #e07c00;
+}
+
+.signOutBtn {
+  background-color: #e74c3c;
+}
+
+.signOutBtn:hover {
+  background-color: #bd392c;
+}
+
+.deskTopSignInBtn {
+  background-color: #3498db;
+}
+
+/* .deskTopNavGenBtn:hover,
+.signOutBtn:hover, */
+
+.deskTopSignInBtn:hover {
+  opacity: 0.8;
+}
+
+/* MobileNavBar Styles */
+.mobileNavBarContainer {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.mobileProfileImg {
+  cursor: pointer;
+}
+
+.dropDownMenuContainer {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 0.5rem;
+  width: 150px;
+
+}
+
+.dropDownLink {
+  display: block;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  color: #333;
+  transition: background-color 0.3s ease;
+  font-size: 16px;
+  font-weight: normal;
+  margin: 0.2rem 0;
+}
+
+.dropDownLink:hover {
+  background-color: #ddd;
+}
+
+
+
+@media only screen and (max-width: 570px) {
+  .deskTopNav {
+    display: none;
+  }
+
+  .mobileNavBarContainer {
+    display: block;
+  }
+
+  .dropDownMenuContainer {
+    display: block;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  .mobileNavImg {
+    display: none;
+  }
+}
