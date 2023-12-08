@@ -16,7 +16,7 @@ const Navbar = () => {
   const [toggleDropDown, setToggleDropdown] = useState(false)
 
   //hacky way to get user icon link to work in desktop but disabel in mobile
-  const isDesktop = typeof window !== 'undefined' && window.innerWidth > 570; //must match mobile nav in css to be smmoth
+  const isDesktop = typeof window !== 'undefined' && window.innerWidth > 720; //must match mobile nav in css to be smmoth
 
   useEffect(() => {
     //await and set the provider response for user
