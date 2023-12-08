@@ -16,6 +16,11 @@ const PromptSchema = new Schema({
         type: String,
         required: true,
     },
+    //add user name to prompt entries to match with usr
+    userId: {
+        type: String,
+        required: true
+    }
     
 })
 

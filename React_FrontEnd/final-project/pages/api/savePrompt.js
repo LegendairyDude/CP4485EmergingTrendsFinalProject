@@ -9,7 +9,7 @@ export default async function handler(req, res) {
     try {
       /* Get parameters from request which is response from
       flask back end name generation */
-      const { petType, petDescription, generatedName } = req.body;
+      const { petType, petDescription, generatedName, userId } = req.body;
 
       //connect to the db
       await dbConnect();
@@ -19,6 +19,7 @@ export default async function handler(req, res) {
         petType,
         petDescription,
         generatedName,
+        userId
       });
 
       //Save prompt to the database

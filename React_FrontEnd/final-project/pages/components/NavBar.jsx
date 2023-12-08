@@ -108,7 +108,7 @@ const Navbar = () => {
                 onClick={() => setToggleDropdown(false)}>
                   Create Pet Name
                 </Link>
-                <Link href='/profile'
+                <Link href='/'
                 className={styles.dropDownLink}
                 onClick={() => {setToggleDropdown(false) 
                 signOut()}}>

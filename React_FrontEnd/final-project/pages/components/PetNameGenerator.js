@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { generatePetName, API_BASE_URL } from "../api";
 import style from "./PetNameGenerator.module.css";
+import { useSession } from "next-auth/react";
 // import dbConnect from "@/utils/db";
 // import Prompt from "@/models/Prompt";
 /* Name generation is to be desired and could be largely improved
@@ -18,6 +19,8 @@ const PetNameGenerator = () => {
   const [loading, setLoading] = useState(false)
   //display error info if occurs
   const [error, setError] = useState("")
+  //get session for logging prompts with usr to db
+  const {data: session} = useSession()
 
   // handle click remastered, possibly the final addition
   const handleGenerateClick = async (e) => {
@@ -57,7 +60,8 @@ const PetNameGenerator = () => {
         body: JSON.stringify({
           petType,
           petDescription,
-          generatedName: generateData.generatedName.petName
+          generatedName: generateData.generatedName.petName,
+          userId:session.user?.id
         }),
       })
     } catch (error) {
