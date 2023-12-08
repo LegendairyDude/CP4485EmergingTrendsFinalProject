@@ -66,14 +66,16 @@
 }
 
 .deskTopSignInBtn {
-  background-color: #3498db;
+  background-color: #ff8c00;
 }
+
 
 /* .deskTopNavGenBtn:hover,
 .signOutBtn:hover, */
 
 .deskTopSignInBtn:hover {
-  opacity: 0.8;
+  /* opacity: 0.8; */
+  background-color: #e07c00;
 }
 
 /* MobileNavBar Styles */
@@ -116,6 +118,22 @@
 }
 
 
+.mobileSignInBtn {
+  display: none;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  background-color: #ff8c00;
+}
+
+.mobileSignInBtn:hover {
+  background-color: #e07c00;
+}
+
 
 @media only screen and (max-width: 720px) {
   .deskTopNav {
@@ -137,5 +155,9 @@
 
   .mobileNavImg {
     display: none;
+  }
+
+  .mobileSignInBtn {
+    display: block;
   }
 }
