@@ -87,6 +87,7 @@
 
 .mobileProfileImg {
   cursor: pointer;
+  border-radius: 50%;
 }
 
 .dropDownMenuContainer {
