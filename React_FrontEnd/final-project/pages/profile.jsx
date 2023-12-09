@@ -8,6 +8,7 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { useSession } from "next-auth/react";
 import style from './profile.module.css'
+import ProfileEntry from "./components/ProfileEntry";
 
 const Profile = () => {
   const {data: session} = useSession()
@@ -40,11 +41,11 @@ return (
         <h2>User: {session.user.name}</h2>
         <ul  className={style.userPromptList}>
           {prompts.map((prompt, index) => (
-            <li key={index} className={style.userEntriesList}>
-              <p className={style.userEntryListItem}>Animal Species: {prompt.petType}</p>
-              <p className={style.userEntryListItem}>Pets Description: {prompt.petDescription}</p>
-              <p className={style.userEntryListItem}>Generated Pet Name's: {prompt.generatedName}</p>
-            </li>
+            <ProfileEntry 
+            key={index}
+            petType={prompt.petType}
+            petDescription={prompt.getDescription}
+            generatedName={prompt.generatedName}/>
           ))}
         </ul>
       </div>
