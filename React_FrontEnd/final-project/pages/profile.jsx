@@ -34,7 +34,7 @@ return (
   <>
   <Navbar />
   <div className={style.profileContainer}>
-    <h1 className={style.profilePageHeader}>Profile Page</h1>
+    <h1 className={`${style.profilePageHeader} ${style.titleBackground}`}>Profile Page</h1>
     {session ? (
       <div className={style.sessionProfileContainer}>
         <h2>User: {session.user.name}</h2>
