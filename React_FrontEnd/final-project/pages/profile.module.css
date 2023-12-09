@@ -1,0 +1,38 @@
+/* profile.module.css */
+/* css module for profile page */
+
+.profileContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.profilePageHeader {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.sessionProfileContainer {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.userPromptList {
+    list-style: none;
+    padding: 0;
+}
+
+.userEntriesList {
+    margin-bottom: 20px;
+}
+
+.userEntryListItem {
+    font-size: 1.2rem;
+    margin: 5px 0;
+}
